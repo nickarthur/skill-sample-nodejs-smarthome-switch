@@ -1,0 +1,19 @@
+{
+  "deploy_settings": {
+    "dev": {
+      "skill_id": "amzn1.ask.skill.5ac78bd3-f79d-4326-a3d9-f981c213fc1c",
+      "was_cloned": false,
+      "merge": {
+        "manifest": {
+          "apis": {
+            "smartHome": {
+              "endpoint": {
+                "uri": "ask-smartHome-skill-sample-nodejs-smarthome-switch-dev"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

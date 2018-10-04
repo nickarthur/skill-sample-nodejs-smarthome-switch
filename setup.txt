@@ -1,0 +1,16 @@
+[Login with Amazon Client ID]
+amzn1.application-oa2-client.8ee03527439c4ee8919c5821afeb9f13
+
+[Login with Amazon Client Secret]
+36ae4f6bda16f52b7facefa83628d8eb0d79050e720b61c3a6651ad30c08ce57
+
+[Alexa Skill Application ID]
+amzn1.ask.skill.5ac78bd3-f79d-4326-a3d9-f981c213fc1c
+
+[AWS Lambda ARN]
+arn:aws:lambda:us-east-1:983539135452:function:ask-smartHome-skill-sample-nodejs-smarthome-switch-dev
+
+[Redirect URLs]
+https://pitangui.amazon.com/api/skill/link/M1FY7UYH9942E
+https://layla.amazon.com/api/skill/link/M1FY7UYH9942E
+https://alexa.amazon.co.jp/api/skill/link/M1FY7UYH9942E

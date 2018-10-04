@@ -58,6 +58,10 @@ exports.handler = async function (event, context) {
 
     let namespace = ((event.directive || {}).header || {}).namespace;
 
+    // NOTE THIS CODE IS NEEDED OR THE USER WILL NOT BE ABLE
+    // TO ACCEPT ACCOUNT LINKING IN THE ALEXA APP !!!!!
+    // THIS TOOK HOURS TO DEBUG AND RESEARCH !!!
+    // I SHOULD HAVE READ THE DOCS! LOL
     if (namespace.toLowerCase() === 'alexa.authorization') {
         let aar = new AlexaResponse({"namespace": "Alexa.Authorization", "name": "AcceptGrant.Response",});
         return sendResponse(aar.get());
@@ -71,6 +75,10 @@ exports.handler = async function (event, context) {
         return sendResponse(adr.get());
     }
 
+    // THIS HANDLES ONE OF MANY POSSIBLE DIRECTIVES
+    // AND WILL HANDLE ANY NUMBER OF POSSIBLE DEVICE ENDPOINTS ;-)
+    // SO YOU CAN USE THIS PATTERN TO CREATE YOUR OWN SMARTHOME
+    // DIRECTIVE HANDLERS
     if (namespace.toLowerCase() === 'alexa.powercontroller') {
         let power_state_value = "OFF";
         if (event.directive.header.name === "TurnOn")
@@ -80,6 +88,9 @@ exports.handler = async function (event, context) {
         let token = event.directive.endpoint.scope.token;
         let correlationToken = event.directive.header.correlationToken;
 
+        // USE THIS HELPER TO BUILD OUR ALEXA RESPONSE
+        // NOTE YOU COULD SEND THIS SAME RESPONSE SHAPE
+        // ASYNCRONOUSELY
         let ar = new AlexaResponse(
             {
                 "correlationToken": correlationToken,
@@ -104,6 +115,9 @@ exports.handler = async function (event, context) {
 
         console.log(JSON.stringify(result));
 
+        // synchronously return response to ALEXA EVENT GATEWAY
+        // IN THE ALEXA CLOUDE.
+        // NOTE: you could opt to send asyncrhonous responses instead
         return sendResponse(ar.get());
     }
 
@@ -125,7 +139,7 @@ function sendDeviceState(endpoint_id, state, value) {
     attribute_obj[key] = {"Action": "PUT", "Value": {"S": value}};
 
     let result = dynamodb.updateItem(
-        {
+        {;
             TableName: "SampleSmartHome",
             Key: {"ItemId": {"S": endpoint_id}},
             AttributeUpdates: attribute_obj

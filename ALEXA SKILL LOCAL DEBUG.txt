@@ -1,0 +1,22 @@
+
+use the following command to launch the debugger in local mode
+
+$ alexa-skill-local --config asl-config.json --file lambda/custom/index.js --port 3000 --inspect-brk
+
+then open the DEBBUGER AND ATTACH TO PROCESS !!!!
+
+EXAMPLE:
+
+
+$  alexa-skill-local --config asl-config.json --file lambda/smarthome/index.js --port 3000 --inspect-brk
+
+
+OUTPUT:
+
+alexa-skill-local is starting...
+Open in your browser and login with Amazon ==> http://localhost:3001
+ngrok is listening on port 3000
+Skill Manifest fetched successfully
+Alexa Skill Endpoint is updated with the url ==>  https://fc43a99d.ngrok.io
+Debugger listening on ws://127.0.0.1:9229/9326d3cc-c851-41cb-8cfe-655f4eeea53d
+For help, see: https://nodejs.org/en/docs/inspector
