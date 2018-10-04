@@ -113,8 +113,6 @@ exports.handler = async function (event, context) {
                 }).get();
         }
 
-        console.log(JSON.stringify(result));
-
         // synchronously return response to ALEXA EVENT GATEWAY
         // IN THE ALEXA CLOUDE.
         // NOTE: you could opt to send asyncrhonous responses instead
