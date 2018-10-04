@@ -139,7 +139,7 @@ function sendDeviceState(endpoint_id, state, value) {
     attribute_obj[key] = {"Action": "PUT", "Value": {"S": value}};
 
     let result = dynamodb.updateItem(
-        {;
+        {
             TableName: "SampleSmartHome",
             Key: {"ItemId": {"S": endpoint_id}},
             AttributeUpdates: attribute_obj

@@ -1,0 +1,22 @@
+
+
+
+POST https://337952e1.ngrok.io HTTP/1.1
+content-type: application/json
+
+{
+    "directive": {
+        "header": {
+            "namespace": "Alexa.Discovery",
+            "name": "Discover",
+            "payloadVersion": "3",
+            "messageId": "a74f978c-ad6b-45c6-91e8-990c548fc0b0"
+        },
+        "payload": {
+            "scope": {
+                "type": "BearerToken",
+                "token": "Atza|IwEBIO9dA5-SRBgZDnaAcU8AzRHoVNThHf4JTxjcgyppMu0ja8rykbIOdhiWIFzCWjLW1YUXsnojM12JhhTEzMNcVqPBUNthkvB09-F-Yn23kTVB_3ji1G1Z4kKl85DckSCu_Px2-euQUmMjzVG7E0S3J9yNrm6rJP9eui0eQrewnDUhfsbtNbBVsUhESp_SYAuJSVqHyZ2sMn6ih955FBdFeKEatPfE_D0tYy6VJsW-gdKOSL7MMxMgbGnvzuh0e0BkwKXC1v-JDSs1o8N1RiKVWYxB7X38KvaeW3jPLf-6fTPlAGt5aDKAeAjrwO-Vps3pRChiMXkzzhwKSgtRSDvtaRVJDwJS8NnRHJZbjOD-eA0Y4xBa66GShP4YzRK6LFLpAgSv-ddoEVHFHsNvwVlFlViGdMpgXx3iSdyv6YhBHKRfVwVwvk1N68tORWC5CJZf3Q0HvwwmosnEAT_ckNKEUYqNV86m6LRdwIj58mqcIS8IrNBrWnw2yPGTDF7-wmjSHCkK94H4kZAmJFMJRUNfmL6tJGIxoSPxitwIybopHxhIAVHhXHlLdnzLy0DLQwzR9fU"
+            }
+        }
+    }
+}
